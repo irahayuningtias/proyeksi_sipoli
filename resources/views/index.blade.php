@@ -146,10 +146,8 @@
             <div class="card-body">
               <h5 class="card-title">Orange</h5>
               <p class="card-text">
-                There are many variations of passages of Lorem Ipsum
-                available, but the majority have suffered alteration in some
-                form, by injected humour, or randomised words which don't look
-                even slightly believable.
+                Siapa saja yang cocok menjalani Diet Paleo? Ini faktanya
+					 Diet paleo merupakan pola makan mengurangi makanan olah berfokus pada makanan 
               </p>
             </div>
           </div>
