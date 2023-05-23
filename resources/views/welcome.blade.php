@@ -1,3 +1,3 @@
-@extends('template')
+@extends('index')
 @section('content')
 @endsection
