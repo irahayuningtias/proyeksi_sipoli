@@ -1062,4 +1062,61 @@ responsive area
       tr:hover td {
         background-color: #e0e0e0;
       }
+
+      /*aboutus*/
+      .container-aboutus{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+
+      /*schedule*/
+      .container-schedule {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+   
+      .schedule {
+        text-align: center;
+        padding: 20px;
+        background-color: #f5f5f5;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+   
+      .schedule h2 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+   
+      .schedule table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+   
+      .schedule th, td {
+        padding: 10px;
+      }
+   
+      .schedule th {
+        background-color: #f9f9f9;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #555;
+      }
+   
+      .schedule td {
+        background-color: #fff;
+        color: #333;
+      }
+   
+      .schedule tr:nth-child(even) td {
+        background-color: #f5f5f5;
+      }
+   
+      .schedule tr:hover td {
+        background-color: #e0e0e0;
+      }
 }
