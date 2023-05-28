@@ -13,14 +13,6 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
 	<script src="{{(asset('doctor'))}}/js/modernizr.js"></script>
-      <style>
-            .container {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 80vh;
-            }
-      </style>
 
       <body>
       <!--header section -->
@@ -44,7 +36,7 @@
                   </div>
             </header> <!-- end of header area -->
 
-            <div class="container">
+            <div class="container-aboutus">
                   <h2>SIPOLI</h2>
                   <p>Poliklinik Politeknik Negeri Malang adalah salah satu fasilitas umum yang dapat dimanfaatkan oleh seluruh civitas akademika Politeknik Negeri Malang mulai dari dosen, karyawan, dan seluruh mahasiswa aktif. 
                   Sistem Informasi Poliklinik Politeknik Negeri Malang atau bisa disebut Sipoli ini dirancang untuk memberikan fasilitas tambahan kepada seluruh civitas akademik Polinema sehingga bisa lebih mudah dalam menghubungi poliklinik yang telah disediakan oleh Polinema. Sistem akan menampilkan
