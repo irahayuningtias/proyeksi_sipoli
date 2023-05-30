@@ -198,16 +198,16 @@
                     <input type="jenis_pengeluaran" class="form-control" id="inputJenisPengeluaran" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputJmlPengeluaran">Jumlah Pengeluaran</label>
-                    <input type="jml_pengelauran" class="form-control" id="inputJmlPengeluaran" placeholder="">
-                  </div>
-                  <div class="form-group">
                     <label for="inputDetailPengeluaran">Detail Pengeluaran</label>
                     <input type="detail_pengeluaran" class="form-control" id="inputDetailPengeluaran" placeholder="">
                   </div>
                   <div class="form-group">
                     <label for="inputJmlItem">Jumlah Item</label>
                     <input type="jml_item" class="form-control" id="inputJmlItem" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputJmlPengeluaran">Jumlah Pengeluaran</label>
+                    <input type="jml_pengelauran" class="form-control" id="inputJmlPengeluaran" placeholder="">
                   </div>
                 </div>
                 <!-- /.card-body -->

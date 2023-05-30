@@ -210,10 +210,6 @@
                     <input type="tgl_exp" class="form-control" id="inputTglExp" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputHarga">Harga</label>
-                    <input type="harga" class="form-control" id="inputHarga" placeholder="">
-                  </div>
-                  <div class="form-group">
                     <label for="inputJmlObat">Jumlah Obat</label>
                     <input type="jml_obat" class="form-control" id="inputJmlObat" placeholder="">
                   </div>

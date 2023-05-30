@@ -198,10 +198,6 @@
                     <input type="tgl_periksa" class="form-control" id="inputTglPeriksa" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputNamaPenyakit">Nama Penyakit</label>
-                    <input type="nama_penyakit" class="form-control" id="inputNamaPenyakit" placeholder="">
-                  </div>
-                  <div class="form-group">
                     <label for="inputJenisPenyakit">Jenis Penyakit</label>
                     <input type="jenis_penyakit" class="form-control" id="inputJenisPenyakit" placeholder="">
                   </div>

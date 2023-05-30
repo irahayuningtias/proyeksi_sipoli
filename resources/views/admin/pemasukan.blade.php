@@ -189,9 +189,8 @@
                     <th>ID Admin</th>
                     <th>Tanggal Masuk</th>
                     <th>Jenis Pemasukan</th>
-                    <th>Jumlah Pemasukan</th>
                     <th>Detail Pemasukan</th>
-                    <th>Jumlah Item</th>
+                    <th>Jumlah Pemasukan</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
@@ -204,10 +203,8 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                   </tr>
                   <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -222,9 +219,8 @@
                     <th>ID Admin</th>
                     <th>Tanggal Masuk</th>
                     <th>Jenis Pemasukan</th>
-                    <th>Jumlah Pemasukan</th>
                     <th>Detail Pemasukan</th>
-                    <th>Jumlah Item</th>
+                    <th>Jumlah Pemasukan</th>
                     <th>Aksi</th>
                   </tr>
                   </tfoot>

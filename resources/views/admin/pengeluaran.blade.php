@@ -189,9 +189,9 @@
                     <th>ID Admin</th>
                     <th>Tanggal Keluar</th>
                     <th>Jenis Pengeluaran</th>
-                    <th>Jumlah Pengeluaran</th>
                     <th>Detail Pengeluaran</th>
                     <th>Jumlah Item</th>
+                    <th>Jumlah Pengeluaran</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
@@ -222,9 +222,9 @@
                     <th>ID Admin</th>
                     <th>Tanggal Keluar</th>
                     <th>Jenis Pengeluaran</th>
-                    <th>Jumlah Pengeluaran</th>
                     <th>Detail Pengeluaran</th>
                     <th>Jumlah Item</th>
+                    <th>Jumlah Pengeluaran</th>
                     <th>Aksi</th>
                   </tr>
                   </tfoot>

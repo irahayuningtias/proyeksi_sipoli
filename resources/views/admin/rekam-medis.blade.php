@@ -189,7 +189,6 @@
                     <th>ID Staf Kesehatan</th>
                     <th>ID Pasien</th>
                     <th>Tanggal Periksa</th>
-                    <th>Nama Penyakit</th>
                     <th>Jenis Penyakit</th>
                     <th>Keluhan</th>
                     <th>Aksi</th>
@@ -204,10 +203,8 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                   </tr>
                   <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -222,7 +219,6 @@
                     <th>ID Staf Kesehatan</th>
                     <th>ID Pasien</th>
                     <th>Tanggal Periksa</th>
-                    <th>Nama Penyakit</th>
                     <th>Jenis Penyakit</th>
                     <th>Keluhan</th>
                     <th>Aksi</th>

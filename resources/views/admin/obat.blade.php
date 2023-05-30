@@ -192,7 +192,6 @@
                     <th>Manfaat Obat</th>
                     <th>Tanggal Beli</th>
                     <th>Tanggal Expired</th>
-                    <th>Harga Obat</th>
                     <th>Jumlah Obat</th>
                     <th>Aksi</th>
                   </tr>
