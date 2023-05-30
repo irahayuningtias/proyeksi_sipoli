@@ -39,7 +39,6 @@
 			</div>
 		</div>
 	</header> <!-- end of header area -->
-
 	<section class="slider" id="home">
 		<div class="container-fluid">
 			<div class="row">
@@ -79,58 +78,6 @@
 			</div>
 		</div>
 	</section><!-- end of slider section -->
-
-	<!-- about section -->
-	<section class="service_section layout_padding ">
-    <div class="container">
-      <h2 class="custom_heading">Artikel Kesehatan</h2>
-      <div class=" layout_padding2">
-        <div class="card-deck">
-          <div class="card">
-            <img class="card-img-top" src="images/card-item-1.png" alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Orange</h5>
-              <p class="card-text">
-                Siapa saja yang cocok menjalani Diet Paleo? Ini faktanya
-					 Diet paleo merupakan pola makan mengurangi makanan olah berfokus pada makanan 
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="images/card-item-2.png" alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Grapes</h5>
-              <p class="card-text">
-                There are many variations of passages of Lorem Ipsum
-                available, but the majority have suffered alteration in some
-                form, by injected humour, or randomised words which don't look
-                even slightly believable.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="images/card-item-3.png" alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Gauva</h5>
-              <p class="card-text">
-                There are many variations of passages of Lorem Ipsum
-                available, but the majority have suffered alteration in some
-                form, by injected humour, or randomised words which don't look
-                even slightly believable.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="d-flex justify-content-center">
-        <a href="" class="custom_dark-btn">
-          Read More
-        </a>
-      </div>
-    </div>
-  </section>
-<!-- end of about section -->
-
 	<!-- footer starts here -->
 	<footer class="footer clearfix">
 		<div class="container">
