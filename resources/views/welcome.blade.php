@@ -1,3 +1,3 @@
-@extends('index')
+@extends('user.home')
 @section('content')
 @endsection

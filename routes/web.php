@@ -17,7 +17,7 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/home', function () {
-    return View::make('user/index');
+    return View::make('welcome');
 });
 Route::get('/schedule', function () {
     return View::make('user/schedule');
