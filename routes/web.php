@@ -17,7 +17,7 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/home', function () {
-    return View::make('welcome');
+    return View::make('user/index');
 });
 Route::get('/schedule', function () {
     return View::make('user/schedule');
@@ -72,4 +72,5 @@ Route::get('/pengeluaran/form-pengeluaran', function(){
 });
 
 Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/register', [RegisterController::class, 'index']);
