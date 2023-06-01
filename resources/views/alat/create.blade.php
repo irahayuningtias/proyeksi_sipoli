@@ -179,15 +179,12 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form method="POST" action="{{ url('alat') }}">
+                @csrf
                 <div class="card-body">
                   <div class="form-group">
                     <label for="inputIdAlatMedis">ID Alat Medis</label>
                     <input type="id_alat" class="form-control" id="inputIdAlatMedis" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputIdStaf">ID Staf Kesehatan</label>
-                    <input type="id_staf" class="form-control" id="inputIdStaf" placeholder="">
                   </div>
                   <div class="form-group">
                     <label for="inputNamaAlat">Nama Alat Medis</label>
@@ -202,7 +199,7 @@
                     <input type="harga_alat" class="form-control" id="inputHargaAlat" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputJmlAlat">Harga Alat Medis</label>
+                    <label for="inputJmlAlat">Jumlah Alat Medis</label>
                     <input type="jml_alat" class="form-control" id="inputJmlAlat" placeholder="">
                   </div>
                 </div>
