@@ -1,53 +1,44 @@
+@extends('user.index')
+@section('content')
+
 <section class="slider" id="home">
 		<div class="container-fluid">
 			<div class="row">
-			    <div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel">
+			    <div id="slide" class="carousel slide carousel-fade" data-ride="carousel">
 					<div class="header-backup"></div>
 			        <!-- Wrapper for slides -->
 			        <div class="carousel-inner" role="listbox">
 			            <div class="item active">
-			            	<img src="{{(asset('doctor'))}}/img/slide-one.jpg" alt="">
-			                <div class="carousel-caption">
-		               			<h1>providing</h1>
-		               			<p>highquality service for men &amp; women</p>
-		               			<button>learn more</button>
-			                </div>
-			            </div>
-			            <div class="item">
-			            	<img src="{{(asset('doctor'))}}/img/slide-two.jpg" alt="">
-			                <div class="carousel-caption">
-		               			<h1>providing</h1>
-		               			<p>highquality service for men &amp; women</p>
-		               			<button>learn more</button>
-			                </div>
-			            </div>
-			            <div class="item">
-			            	<img src="{{(asset('doctor'))}}/img/slide-three.jpg" alt="">
-			                <div class="carousel-caption">
-		               			<h1>providing</h1>
-		               			<p>highquality service for men &amp; women</p>
-		               			<button>learn more</button>
-			                </div>
-			            </div>
-			            <div class="item">
-			            	<img src="{{(asset('doctor'))}}/img/slide-four.jpg" alt="">
-			                <div class="carousel-caption">
-		               			<h1>providing</h1>
-		               			<p>highquality service for men &amp; women</p>
-		               			<button>learn more</button>
-			                </div>
-			            </div>
+			            	<img src="{{(asset('doctor'))}}/img/stetoskop.jpg" alt="">
+								<div class="card">
+									<div class="rectangle-3"></div>
+									<div class="flex-row flex">
+										<div class="d-flex justify-content-evenly">
+											<div class="health-information lora-bold-east-bay-3-7px">Healt Information</div>
+											<div class="overlap-group">
+												<div class="more-info inter-medium-white-2-5px">More Info</div>
+											</div>
+										</div>
+										<div class="flex-col-1 flex-col-3">
+											<div class="opening-hours lora-bold-east-bay-3-7px">Opening Hours</div>
+											<div class="flex-container flex">
+												<div class="text inter-medium-white-2-5px-2">
+													<span class="inter-medium-sonic-silver-2-5px">Hari&nbsp;&nbsp;&nbsp;&nbsp;: Senin - Jumat</span>
+												</div>
+												<div class="text inter-medium-white-2-5px-2">
+													<span class="inter-medium-sonic-silver-2-5px">Pukul : </span><span class="span2">07.00 - 16.00</span>
+												</div>
+											</div>
+										</div>
+										<div class="emergency-cases lora-bold-east-bay-3-7px">emergency cases</div>
+										<div class="phone">+62 822-4445-3495</div>
+									</div>
+								</div>
+							</div>
 			        </div>
-			        <!-- Controls -->
-			        <a class="left carousel-control" href="#carouselHacked" role="button" data-slide="prev">
-			            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			            <span class="sr-only">Previous</span>
-			        </a>
-			        <a class="right carousel-control" href="#carouselHacked" role="button" data-slide="next">
-			            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			            <span class="sr-only">Next</span>
-			        </a>
 			    </div>
 			</div>
 		</div>
 	</section><!-- end of slider section -->
+
+	@endsection

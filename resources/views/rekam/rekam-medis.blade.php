@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIPOLI - Pengeluaran</title>
+  <title>SIPOLI - Rekam Medis</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -157,12 +157,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Pengeluaran</h1>
+            <h1>Data Rekam Medis</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Pengeluaran</li>
+              <li class="breadcrumb-item active">Rekam Medis</li>
             </ol>
           </div>
         </div>
@@ -176,7 +176,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <a href="pengeluaran/form-pengeluaran">
+                <a href="rekam-medis/form-rekam-medis">
                   <button type="submit" class="btn btn-primary">Tambah Data</button>
                 </a>
               </div>
@@ -185,13 +185,12 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>ID Keuangan</th>
-                    <th>ID Admin</th>
-                    <th>Tanggal Keluar</th>
-                    <th>Jenis Pengeluaran</th>
-                    <th>Jumlah Pengeluaran</th>
-                    <th>Detail Pengeluaran</th>
-                    <th>Jumlah Item</th>
+                    <th>ID Rekam Medis</th>
+                    <th>ID Staf Kesehatan</th>
+                    <th>ID Pasien</th>
+                    <th>Tanggal Periksa</th>
+                    <th>Jenis Penyakit</th>
+                    <th>Keluhan</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
@@ -204,10 +203,8 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                   </tr>
                   <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -218,13 +215,12 @@
                   </tr>
                   <tfoot>
                   <tr>
-                    <th>ID Keuangan</th>
-                    <th>ID Admin</th>
-                    <th>Tanggal Keluar</th>
-                    <th>Jenis Pengeluaran</th>
-                    <th>Jumlah Pengeluaran</th>
-                    <th>Detail Pengeluaran</th>
-                    <th>Jumlah Item</th>
+                    <th>ID Rekam Medis</th>
+                    <th>ID Staf Kesehatan</th>
+                    <th>ID Pasien</th>
+                    <th>Tanggal Periksa</th>
+                    <th>Jenis Penyakit</th>
+                    <th>Keluhan</th>
                     <th>Aksi</th>
                   </tr>
                   </tfoot>

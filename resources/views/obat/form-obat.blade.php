@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIPOLI - Pemasukan</title>
+  <title>SIPOLI - Obat</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -154,12 +154,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Form Pemasukan</h1>
+            <h1>Form Obat</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Pemasukan</li>
+              <li class="breadcrumb-item active">Obat</li>
             </ol>
           </div>
         </div>
@@ -175,39 +175,43 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Pemasukan</h3>
+                <h3 class="card-title">Obat</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form>
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="inputIdPemasukan">ID Pemasukan</label>
-                    <input type="id_pemasukan" class="form-control" id="inputIdPemasukan" placeholder="">
+                    <label for="inputIdObat">ID Obat</label>
+                    <input type="id_obat" class="form-control" id="inputIdObat" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputIdAdmin">ID Admin</label>
-                    <input type="id_admin" class="form-control" id="inputIdAdmin" placeholder="">
+                    <label for="inputIdStaf">ID Staf Kesehatan</label>
+                    <input type="id_staf" class="form-control" id="inputIdStaf" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputTglMasuk">Tanggal Masuk</label>
-                    <input type="tgl_masuk" class="form-control" id="inputTglMasuk" placeholder="">
+                    <label for="inputNamaObat">Nama Obat</label>
+                    <input type="nama_obat" class="form-control" id="inputNamaObat" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputJenisPemasukan">Jenis Pemasukan</label>
-                    <input type="jenis_pemasukan" class="form-control" id="inputJenisPemasukan" placeholder="">
+                    <label for="inputJenisObat">Jenis Obat</label>
+                    <input type="jenis_obat" class="form-control" id="inputJenisObat" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputJmlPemasukan">Jumlah Pemasukan</label>
-                    <input type="jml_pemasukan" class="form-control" id="inputJmlPemasukan" placeholder="">
+                    <label for="inputManfaatObat">Manfaat Obat</label>
+                    <input type="manfaat_obat" class="form-control" id="inputManfaatObat" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputDetailPemasukan">Detail Pemasukan</label>
-                    <input type="detail_pemasukan" class="form-control" id="inputDetailPemasukan" placeholder="">
+                    <label for="inputTglBeli">Tanggal Beli</label>
+                    <input type="tgl_beli" class="form-control" id="inputTglBeli" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputJmlItem">Jumlah Item</label>
-                    <input type="jml_item" class="form-control" id="inputJmlItem" placeholder="">
+                    <label for="inputTglExp">Tanggal Expired</label>
+                    <input type="tgl_exp" class="form-control" id="inputTglExp" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputJmlObat">Jumlah Obat</label>
+                    <input type="jml_obat" class="form-control" id="inputJmlObat" placeholder="">
                   </div>
                 </div>
                 <!-- /.card-body -->

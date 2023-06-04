@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIPOLI - Rekam Medis</title>
+  <title>SIPOLI - Pemasukan</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -154,12 +154,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Form Rekam Medis</h1>
+            <h1>Form Pemasukan</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Rekam Medis</li>
+              <li class="breadcrumb-item active">Pemasukan</li>
             </ol>
           </div>
         </div>
@@ -175,40 +175,37 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Rekam Medis</h3>
+                <h3 class="card-title">Pemasukan</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form>
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="inputIdRm">ID Rekam Medis</label>
-                    <input type="id_rm" class="form-control" id="inputIdRm" placeholder="">
+                    <label for="inputIdPemasukan">ID Pemasukan</label>
+                    <input type="id_pemasukan" class="form-control" id="inputIdPemasukan" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputIdStaf">ID Staf Kesehatan</label>
-                    <input type="id_staf" class="form-control" id="inputIdStaf" placeholder="">
+                    <label for="inputIdAdmin">ID Admin</label>
+                    <input type="id_admin" class="form-control" id="inputIdAdmin" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputIdPasien">ID Pasien</label>
-                    <input type="id_pasien" class="form-control" id="inputIdPasien" placeholder="">
+                    <label for="inputTglMasuk">Tanggal Masuk</label>
+                    <input type="tgl_masuk" class="form-control" id="inputTglMasuk" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputTglPeriksa">Tanggal Periksa</label>
-                    <input type="tgl_periksa" class="form-control" id="inputTglPeriksa" placeholder="">
+                    <label for="inputJenisPemasukan">Jenis Pemasukan</label>
+                    <input type="jenis_pemasukan" class="form-control" id="inputJenisPemasukan" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputNamaPenyakit">Nama Penyakit</label>
-                    <input type="nama_penyakit" class="form-control" id="inputNamaPenyakit" placeholder="">
+                    <label for="inputDetailPemasukan">Detail Pemasukan</label>
+                    <input type="detail_pemasukan" class="form-control" id="inputDetailPemasukan" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputJenisPenyakit">Jenis Penyakit</label>
-                    <input type="jenis_penyakit" class="form-control" id="inputJenisPenyakit" placeholder="">
+                    <label for="inputJmlPemasukan">Jumlah Pemasukan</label>
+                    <input type="jml_pemasukan" class="form-control" id="inputJmlPemasukan" placeholder="">
                   </div>
-                  <div class="form-group">
-                    <label for="inputKeluhan">Keluhan</label>
-                    <input type="keluhan" class="form-control" id="inputKeluhan" placeholder="">
-                  </div>
+
                 </div>
                 <!-- /.card-body -->
 

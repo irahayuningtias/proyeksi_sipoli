@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIPOLI - Pengeluaran</title>
+  <title>SIPOLI - Alat Medis</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -154,12 +154,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Form Pengeluaran</h1>
+            <h1>Form Alat Medis</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Pengeluaran</li>
+              <li class="breadcrumb-item active">Alat Medis</li>
             </ol>
           </div>
         </div>
@@ -175,39 +175,32 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Pengeluaran</h3>
+                <h3 class="card-title">Alat Medis</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form method="POST" action="{{ url('alat') }}">
+                @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="inputIdPengeluaran">ID Pengeluaran</label>
-                    <input type="id_pengeluaran" class="form-control" id="inputIdPengeluaran" placeholder="">
+                    <label for="inputIdAlatMedis">ID Alat Medis</label>
+                    <input type="id_alat" class="form-control" id="inputIdAlatMedis" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputIdAdmin">ID Admin</label>
-                    <input type="id_admin" class="form-control" id="inputIdAdmin" placeholder="">
+                    <label for="inputNamaAlat">Nama Alat Medis</label>
+                    <input type="nama_alat" class="form-control" id="inputNamaAlat" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputTglKeluar">Tanggal Keluar</label>
-                    <input type="tgl_keluar" class="form-control" id="inputTglKeluar" placeholder="">
+                    <label for="inputJenisAlat">Jenis Alat Medis</label>
+                    <input type="jenis_alat" class="form-control" id="inputJenisAlat" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputJenisPengeluaran">Jenis Pengeluaran</label>
-                    <input type="jenis_pengeluaran" class="form-control" id="inputJenisPengeluaran" placeholder="">
+                    <label for="inputHargaAlat">Harga Alat Medis</label>
+                    <input type="harga_alat" class="form-control" id="inputHargaAlat" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="inputJmlPengeluaran">Jumlah Pengeluaran</label>
-                    <input type="jml_pengelauran" class="form-control" id="inputJmlPengeluaran" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputDetailPengeluaran">Detail Pengeluaran</label>
-                    <input type="detail_pengeluaran" class="form-control" id="inputDetailPengeluaran" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputJmlItem">Jumlah Item</label>
-                    <input type="jml_item" class="form-control" id="inputJmlItem" placeholder="">
+                    <label for="inputJmlAlat">Jumlah Alat Medis</label>
+                    <input type="jml_alat" class="form-control" id="inputJmlAlat" placeholder="">
                   </div>
                 </div>
                 <!-- /.card-body -->

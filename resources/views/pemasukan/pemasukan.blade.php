@@ -3,12 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIPOLI - Obat</title>
+  <title>SIPOLI - Pemasukan</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('admin/dist/css/adminlte.min.css') }}">
 </head>
@@ -59,8 +63,7 @@
     <a href="dashboard" class="brand-link">
       <span class="brand-text font-weight-bold">SIPOLI</span>
     </a>
-
-    <!--Sidebar -->
+    <!-- Sidebar -->
       <!-- SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
@@ -143,7 +146,7 @@
           </li>
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->
+      <!-- /.sidebar-menu -->=
     <!-- /.sidebar -->
   </aside>
 
@@ -154,12 +157,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Form Obat</h1>
+            <h1>Data Pemasukan</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Obat</li>
+              <li class="breadcrumb-item active">Pemasukan</li>
             </ol>
           </div>
         </div>
@@ -170,71 +173,71 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <!-- left column -->
-          <div class="col-md-12">
-            <!-- general form elements -->
-            <div class="card card-primary">
+          <div class="col-12">
+            <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Obat</h3>
+                <a href="pemasukan/form-pemasukan">
+                  <button type="submit" class="btn btn-primary">Tambah Data</button>
+                </a>
               </div>
               <!-- /.card-header -->
-              <!-- form start -->
-              <form>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="inputIdObat">ID Obat</label>
-                    <input type="id_obat" class="form-control" id="inputIdObat" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputIdStaf">ID Staf Kesehatan</label>
-                    <input type="id_staf" class="form-control" id="inputIdStaf" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputNamaObat">Nama Obat</label>
-                    <input type="nama_obat" class="form-control" id="inputNamaObat" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputJenisObat">Jenis Obat</label>
-                    <input type="jenis_obat" class="form-control" id="inputJenisObat" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputManfaatObat">Manfaat Obat</label>
-                    <input type="manfaat_obat" class="form-control" id="inputManfaatObat" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputTglBeli">Tanggal Beli</label>
-                    <input type="tgl_beli" class="form-control" id="inputTglBeli" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputTglExp">Tanggal Expired</label>
-                    <input type="tgl_exp" class="form-control" id="inputTglExp" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputHarga">Harga</label>
-                    <input type="harga" class="form-control" id="inputHarga" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputJmlObat">Jumlah Obat</label>
-                    <input type="jml_obat" class="form-control" id="inputJmlObat" placeholder="">
-                  </div>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
+              <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <th>ID Keuangan</th>
+                    <th>ID Admin</th>
+                    <th>Tanggal Masuk</th>
+                    <th>Jenis Pemasukan</th>
+                    <th>Detail Pemasukan</th>
+                    <th>Jumlah Pemasukan</th>
+                    <th>Aksi</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tfoot>
+                  <tr>
+                    <th>ID Keuangan</th>
+                    <th>ID Admin</th>
+                    <th>Tanggal Masuk</th>
+                    <th>Jenis Pemasukan</th>
+                    <th>Detail Pemasukan</th>
+                    <th>Jumlah Pemasukan</th>
+                    <th>Aksi</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
             </div>
             <!-- /.card -->
           </div>
-          <!--/.col (right) -->
+          <!-- /.col -->
         </div>
         <!-- /.row -->
-      </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
-  
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
@@ -255,17 +258,40 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- bs-custom-file-input -->
-<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../plugins/jszip/jszip.min.js"></script>
+<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <!-- Page specific script -->
 <script>
-$(function () {
-  bsCustomFileInput.init();
-});
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
 </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIPOLI - Obat</title>
+  <title>SIPOLI - Pengeluaran</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -157,12 +157,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Obat</h1>
+            <h1>Data Pengeluaran</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Obat</li>
+              <li class="breadcrumb-item active">Pengeluaran</li>
             </ol>
           </div>
         </div>
@@ -176,7 +176,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <a href="obat/form-obat">
+                <a href="pengeluaran/form-pengeluaran">
                   <button type="submit" class="btn btn-primary">Tambah Data</button>
                 </a>
               </div>
@@ -185,15 +185,13 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>ID Obat</th>
-                    <th>ID Staf Kesehatan</th>
-                    <th>Nama Obat</th>
-                    <th>Jenis Obat</th>
-                    <th>Manfaat Obat</th>
-                    <th>Tanggal Beli</th>
-                    <th>Tanggal Expired</th>
-                    <th>Harga Obat</th>
-                    <th>Jumlah Obat</th>
+                    <th>ID Keuangan</th>
+                    <th>ID Admin</th>
+                    <th>Tanggal Keluar</th>
+                    <th>Jenis Pengeluaran</th>
+                    <th>Detail Pengeluaran</th>
+                    <th>Jumlah Item</th>
+                    <th>Jumlah Pengeluaran</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
@@ -207,11 +205,8 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
                   </tr>
                   <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -223,15 +218,13 @@
                   </tr>
                   <tfoot>
                   <tr>
-                    <th>ID Obat</th>
-                    <th>ID Staf Kesehatan</th>
-                    <th>Nama Obat</th>
-                    <th>Jenis Obat</th>
-                    <th>Manfaat Obat</th>
-                    <th>Tanggal Beli</th>
-                    <th>Tanggal Expired</th>
-                    <th>Harga Obat</th>
-                    <th>Jumlah Obat</th>
+                    <th>ID Keuangan</th>
+                    <th>ID Admin</th>
+                    <th>Tanggal Keluar</th>
+                    <th>Jenis Pengeluaran</th>
+                    <th>Detail Pengeluaran</th>
+                    <th>Jumlah Item</th>
+                    <th>Jumlah Pengeluaran</th>
                     <th>Aksi</th>
                   </tr>
                   </tfoot>

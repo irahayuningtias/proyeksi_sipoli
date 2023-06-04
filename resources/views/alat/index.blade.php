@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIPOLI - Rekam Medis</title>
+  <title>SIPOLI - Alat Medis</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -157,12 +157,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Rekam Medis</h1>
+            <h1>Data Alat Medis</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Rekam Medis</li>
+              <li class="breadcrumb-item active">Alat Medis</li>
             </ol>
           </div>
         </div>
@@ -176,7 +176,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <a href="rekam-medis/form-rekam-medis">
+                <a href="{{ url('alat/create') }}">
                   <button type="submit" class="btn btn-primary">Tambah Data</button>
                 </a>
               </div>
@@ -185,49 +185,34 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>ID Rekam Medis</th>
-                    <th>ID Staf Kesehatan</th>
-                    <th>ID Pasien</th>
-                    <th>Tanggal Periksa</th>
-                    <th>Nama Penyakit</th>
-                    <th>Jenis Penyakit</th>
-                    <th>Keluhan</th>
+                    <th>ID Alat Medis</th>
+                    <th>Nama Alat</th>
+                    <th>Jenis Alat</th>
+                    <th>Harga Alat</th>
+                    <th>Jumlah Alat</th>
                     <th>Aksi</th>
                   </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tfoot>
-                  <tr>
-                    <th>ID Rekam Medis</th>
-                    <th>ID Staf Kesehatan</th>
-                    <th>ID Pasien</th>
-                    <th>Tanggal Periksa</th>
-                    <th>Nama Penyakit</th>
-                    <th>Jenis Penyakit</th>
-                    <th>Keluhan</th>
-                    <th>Aksi</th>
-                  </tr>
-                  </tfoot>
+                  @foreach ($alats as $key => $item)
+              <tr>
+                <td>{{$item->id_alat}}</td>
+                <td>{{$item->nama_alat}}</td>
+                <td>{{$item->jenis_alat}}</td>
+                <td>{{$item->harga}}</td>
+                <td>{{$item->jumlah}}</td>
+                <td>
+                      <a href ="{{ url('alat/'.$item->id_alat.'/edit') }}">
+                      <button type="submit" class="btn btn-primary">EDIT</button></a>
+                    </td>
+                    <td>
+                      <form action="{{ url('alat/'.$item->id_alat) }}" method="POST">
+                      @method('delete')
+                      @csrf
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button class="btn btn-danger" type="submit">HAPUS</button></input>
+                      </form>
+                    </td> 
+                @endforeach
+</tr>
                 </table>
               </div>
               <!-- /.card-body -->
