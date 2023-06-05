@@ -13,49 +13,56 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
 	<script src="{{(asset('doctor'))}}/js/modernizr.js"></script>
-  <style>
 
-    .schedule {
+
+  <style>
+     .rectangle1{
+        position: absolute;
+        width: 830px;
+        height: 56.93px;
+        left: 220px;
+        right: 50px;
+        top: 130px;
+        background: #435185;
+      }
+      .rectangle2{
         text-align: center;
-        padding: 20px;
-        background-color: #f5f5f5;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-   
-      .schedule h2 {
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 20px;
-      }
-   
-      .schedule table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-   
-      .schedule th, td {
+        position: absolute;
+        width: 830px;
+        height: 360px;
+        left: 220px;
+        right: 50px;
+        top: 150px;
+        background: #FFFFFF;
+        box-shadow: 3px 3px 10px rgba(0.60,0,0,0.65);
         padding: 10px;
       }
-   
-      .schedule th {
-        background-color: #f9f9f9;
-        font-weight: bold;
-        text-align: center;
-        text-transform: uppercase;
-        color: #555;
+
+      h2{
+        font-family: 'Lora';
+        font-style: normal;
+        color: #435185;
+        font-weight: 700;
       }
-   
-      .schedule td {
-        background-color: #fff;
-        color: #333;
+
+      .col-lg-6{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 15px;
+        color: #727272;
       }
-   
-      .schedule tr:nth-child(even) td {
-        background-color: #fff;
-      }
-   
-      .schedule tr:hover td {
-        background-color: #fff;
+
+      .line{
+        position: absolute;
+        width: 300px;
+        height: 0px;
+        left: 480px;
+        right: 50px;
+        top: 320px;
+        border: 0.2px solid #9D9B9B;
+        transform: rotate(90deg);
       }
   </style>
 </head>	
@@ -82,31 +89,22 @@
 		</div>
 	</header> <!-- end of header area -->
 
-  <div class="container-schedule">
-    <div class="schedule">
-      <h2>Jadwal Praktek Dokter</h2>
-      <table>
-        <tr>
-          <th>Dokter</th>
-          <th>Hari</th>
-          <th>Jam Praktek</th>
-        </tr>
-        <tr>
-          <td rowspan="2">Dokter Umum</td>
-          <td>Rabu</td>
-          <td>08:00 - 11:00</td>
-        </tr>
-        <tr>
-          <td>Jumat</td>
-          <td>12:15 - 14:15</td>
-        </tr>
-        <tr>
-          <td>Dokter Gigi</td>
-          <td>Rabu</td>
-          <td>08:00 - 11:00</td>
-        </tr>
-      </table>
-    </div>
-  </div>
+  <div class="rectangle1"></div>
+  <div class="rectangle2">
+      <div class="col-lg-6">
+		    <h2>Dokter Umum</h2>
+        <br><br><br><br>
+        <p>Rabu: 08.00 - 11.00</p>
+        <p>(Menyesuaikan jadwal dokter)</p>
+        <hr>
+        <p>Jumat: 12.15 - 14.15</p>
+			</div><!-- /.col-lg-4 -->
+			<div class="col-lg-6">
+				<h2>Dokter Gigi</h2>
+        <br><br><br><br><br><br>
+        <p>Rabu: 11.00 - 16.00</p>
+			</div><!-- /.col-lg-4 -->
+  </div>   
+  <div class="line"></div>
 </body>
 </html>

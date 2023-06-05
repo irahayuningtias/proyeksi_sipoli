@@ -85,9 +85,7 @@
             </header> <!-- end of header area -->
 
                   <div class="rectangle1"></div>
-                  <div class="rectangle2"></div>
-
-                  
+                  <div class="rectangle2"></div>              
 
                   <div class="aboutus">
                         <h2>SIPOLI</h2>

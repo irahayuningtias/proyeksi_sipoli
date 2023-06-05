@@ -17,7 +17,6 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <style>
@@ -30,7 +29,7 @@
         top: 140px;
 		font-family: 'Lora';
 		font-style: normal;
-		font-weight: 500px;
+		font-weight: 500;
 		font-size: 70px;
 		line-height: 60px;
 		color: #435185
@@ -122,7 +121,7 @@
 									<div class="row2">
 											<div class="col-lg-4">
 												<h2>Health Information</h2>
-												<p><a class="btn btn-secondary" href="https://www.youtube.com/watch?v=VQo4hyWfBQ4&list=RDv27COkZT4GY&index=8">More Info &raquo;</a></p>
+												<p><a class="btn btn-secondary" href="healthinfo">More Info &raquo;</a></p>
 											</div><!-- /.col-lg-4 -->
 											<div class="col-lg-4">
 												<h2>Opening Hours</h2>
