@@ -21,20 +21,64 @@
 </head>
 
 <style>
-.footer {
-	background-color: white;
-  	text-align: center;
 
-}
+	.slogan{
+		position: absolute;
+        width: 280px;
+        height: 50px;
+		right: 80px;
+        top: 140px;
+		font-family: 'Lora';
+		font-style: normal;
+		font-weight: 500px;
+		font-size: 70px;
+		line-height: 60px;
+		color: #435185
+	}
 
-h2{
-	color:#435185; 
-	font-family:Lora; 
-	font-style: normal; 
-	font-weight: 700; 
-	font-size: 20px; 
-	line-height: 5px;
-}
+	.rectangle1{
+		position: absolute;
+        width: 1240px;
+        height: 10px;
+        left: 12px;
+    	right: 50px;
+        top: 820px;
+		background: #435185;
+	}
+
+	.rectangle2{
+		position: absolute;
+        width: 1240px;
+        height: 150px;
+        left: 12px;
+    	right: 50px;
+        top: 830px;
+        background: #FFFFFF;
+        box-shadow: 3px 3px 10px rgba(0.60,0,0,0.65);
+        padding: 10px;
+	}
+
+	.col-lg-4{
+		left: 230px;
+		height: 150px;
+		width: 300px;
+		align: center;
+	}
+
+	.footer {
+		left: 500px;
+		text-align: left;
+		padding: 10px;
+	}
+
+	h2{
+		color:#435185; 
+		font-family:Lora; 
+		font-style: normal; 
+		font-weight: 700; 
+		font-size: 20px; 
+		line-height: 5px;
+	}
 </style>
 
 <body>
@@ -69,11 +113,16 @@ h2{
 			            	<div class="item active">
 			            		<img src="{{(asset('doctor'))}}/img/stetoskop.jpg">
 									<!-- Three columns of text below the carousel -->
+									<div class="slogan">
+										<p>Your health is our focus</p>
+									</div>
+									<div class="rectangle1"></div>
+									<div class="rectangle2"></div>
 								<div class="footer">
-										<div class="row">
+									<div class="row2">
 											<div class="col-lg-4">
 												<h2>Health Information</h2>
-												<p"><a class="btn btn-secondary" href="https://www.youtube.com/watch?v=VQo4hyWfBQ4&list=RDv27COkZT4GY&index=8">More Info &raquo;</a></p>
+												<p><a class="btn btn-secondary" href="https://www.youtube.com/watch?v=VQo4hyWfBQ4&list=RDv27COkZT4GY&index=8">More Info &raquo;</a></p>
 											</div><!-- /.col-lg-4 -->
 											<div class="col-lg-4">
 												<h2>Opening Hours</h2>
@@ -84,7 +133,7 @@ h2{
 												<h2>Emergency Cases</h2>
 												<p style= "color:#3C7CDC; font-family:'Inter'; font-style: normal;">+62 822-4455-3495</p>
 											</div><!-- /.col-lg-4 -->
-										</div><!-- /.row -->
+									</div>
 								</div>
 							</div>	
 			        	</div>
@@ -93,73 +142,6 @@ h2{
 			</div>
 		</div>
 	</section><!-- end of slider section -->
-
-	<!-- about section -->
-	<section class="service_section layout_padding ">
-    <div class="container">
-      <h2 class="custom_heading">Artikel Kesehatan</h2>
-      <div class=" layout_padding2">
-        <div class="card-deck">
-          <div class="card">
-            <img class="card-img-top" src="images/card-item-1.png" alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Orange</h5>
-              <p class="card-text">
-                Siapa saja yang cocok menjalani Diet Paleo? Ini faktanya
-					 Diet paleo merupakan pola makan mengurangi makanan olah berfokus pada makanan 
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="images/card-item-2.png" alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Grapes</h5>
-              <p class="card-text">
-                There are many variations of passages of Lorem Ipsum
-                available, but the majority have suffered alteration in some
-                form, by injected humour, or randomised words which don't look
-                even slightly believable.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="images/card-item-3.png" alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Gauva</h5>
-              <p class="card-text">
-                There are many variations of passages of Lorem Ipsum
-                available, but the majority have suffered alteration in some
-                form, by injected humour, or randomised words which don't look
-                even slightly believable.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="d-flex justify-content-center">
-        <a href="" class="custom_dark-btn">
-          Read More
-        </a>
-      </div>
-    </div>
-  </section>
-<!-- end of about section -->
-
-	<!-- footer starts here -->
-	<footer class="footer clearfix">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-6 footer-para">
-					<p>&copy;Mostafizur All right reserved</p>
-				</div>
-				<div class="col-xs-6 text-right">
-					<a href=""><i class="fa fa-facebook"></i></a>
-					<a href=""><i class="fa fa-twitter"></i></a>
-					<a href=""><i class="fa fa-skype"></i></a>
-				</div>
-			</div>
-		</div>
-	</footer>
 
 	<!-- script tags
 	============================================================= -->

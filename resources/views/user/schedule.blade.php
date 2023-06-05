@@ -14,6 +14,7 @@
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
 	<script src="{{(asset('doctor'))}}/js/modernizr.js"></script>
   <style>
+
     .schedule {
         text-align: center;
         padding: 20px;
@@ -70,8 +71,8 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	    <ul class="nav navbar-nav navbar-right">
-					    <li><a class="menu active" href="home">Home</a></li>
-					    <li><a class="menu" href="schedule">Schedule</a></li>
+					    <li><a class="menu" href="home">Home</a></li>
+					    <li><a class="menu active" href="schedule">Schedule</a></li>
 				        <li><a class="menu" href="aboutus">About Us </a></li>
 				        <li><a class="menu" href="contact">Contact</a></li>
 				        <li><a class="menu" href="login.index"> Login</a></li>
