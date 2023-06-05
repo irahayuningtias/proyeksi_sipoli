@@ -101,7 +101,7 @@
 			</div><!-- /.col-lg-4 -->
 			<div class="col-lg-6">
 				<h2>Dokter Gigi</h2>
-        <br><br><br><br><br><br>
+        <br><br><br><br>
         <p>Rabu: 11.00 - 16.00</p>
 			</div><!-- /.col-lg-4 -->
   </div>   
