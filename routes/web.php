@@ -6,6 +6,7 @@ use App\Http\Controllers\AlatController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ObatController;
+use App\Http\Controllers\PasienController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,17 +86,14 @@ Route::get('/healthinfo', function(){
                 return redirect('/home');
             });
             Route::middleware(['auth'])->group(function () {
+                Route::resource('obat', ObatController::class);
+                Route::resource('pasien', PasienController::class);
                 Route::resource('alat', AlatController::class);
                 Route::get('/dashboard', function() {
                     return view('admin/dashboard');
                 });
             });
-            Route::middleware(['auth'])->group(function () {
-                Route::resource('obat', ObatController::class);
-                Route::get('/dashboard', function() {
-                    return view('admin/dashboard');
-                });
-            });
+        
             
             
             

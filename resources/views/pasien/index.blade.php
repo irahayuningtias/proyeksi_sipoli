@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('admin/dist/css/adminlte.min.css') }}">
 </head>
@@ -59,8 +63,7 @@
     <a href="dashboard" class="brand-link">
       <span class="brand-text font-weight-bold">SIPOLI</span>
     </a>
-
-    <!--Sidebar -->
+    <!-- Sidebar -->
       <!-- SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
@@ -143,7 +146,7 @@
           </li>
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->
+      <!-- /.sidebar-menu -->=
     <!-- /.sidebar -->
   </aside>
 
@@ -154,7 +157,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Form Pasien</h1>
+            <h1>Data Pasien</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -170,59 +173,67 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <!-- left column -->
-          <div class="col-md-12">
-            <!-- general form elements -->
-            <div class="card card-primary">
+          <div class="col-12">
+            <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Pasien</h3>
+                <a href="{{ url('pasien/create') }}">
+                  <button type="submit" class="btn btn-primary">Tambah Data</button>
+                </a>
               </div>
               <!-- /.card-header -->
-              <!-- form start -->
-              <form>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="inputIdPasien">ID Pasien</label>
-                    <input type="id_pasien" class="form-control" id="inputIdPasien" placeholder="">
+              <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <th>ID Pasien</th>
+                    <th>ID Admin</th>
+                    <th>Nama Pasien</th>
+                    <th>Umur Pasien</th>
+                    <th>Program Studi</th>
+                    <th>Jurusan</th>
+                    <th>Aksi</th>
+                  </tr>
+                  @foreach ($pasiens as $pasien)
+              <tr>
+                <td>{{ $pasien->id }}</td>
+                <td>{{$pasien->id_admin}}</td>
+                <td>{{$pasien->nama_pasien}}</td>
+                <td>{{$pasien->umur}}</td>
+                <td>{{$pasien->prodi}}</td>
+                <td>{{$pasien->jurusan}}</td>
+                <td>
+                      
+                <div class="d-flex justify-content-between">
+                  <div class="">
+                    <a href ="{{ url('pasien/'.$pasien->id.'/edit') }}">
+                    <button type="submit" class="btn btn-sm btn-primary">EDIT</button></a>
                   </div>
-                  <div class="form-group">
-                    <label for="inputIdAdmin">ID Admin</label>
-                    <input type="id_admin" class="form-control" id="inputIdAdmin" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputNamaPasien">Nama Pasien</label>
-                    <input type="nama_pasien" class="form-control" id="inputNamaPasien" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputUmurPasien">Umur Pasien</label>
-                    <input type="umur_pasien" class="form-control" id="inputUmurPasien" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputProdi">Program Studi</label>
-                    <input type="prodi" class="form-control" id="inputProdi" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputJurusan">Jurusan</label>
-                    <input type="jurusan" class="form-control" id="inputJurusan" placeholder="">
+                  <div class="">
+                    <form action="{{ url('pasien/'.$pasien->id) }}" method="POST">
+                      @method('delete')
+                      @csrf
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button class="btn btn-sm btn-danger" type="submit">HAPUS</button></input>
+                    </form>
                   </div>
                 </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
+              </td> 
+                @endforeach
+</tr>
+                </table>
+              </div>
+              <!-- /.card-body -->
             </div>
             <!-- /.card -->
           </div>
-          <!--/.col (right) -->
+          <!-- /.col -->
         </div>
         <!-- /.row -->
-      </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
-  
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
@@ -243,17 +254,40 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- bs-custom-file-input -->
-<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../plugins/jszip/jszip.min.js"></script>
+<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <!-- Page specific script -->
 <script>
-$(function () {
-  bsCustomFileInput.init();
-});
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
 </script>
 </body>
 </html>
