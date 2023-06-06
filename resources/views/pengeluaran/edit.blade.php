@@ -106,7 +106,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="alat-medis" class="nav-link">
+            <a href="alat" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Alat Medis
@@ -115,7 +115,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="rekam-medis" class="nav-link">
+            <a href="rekam" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Rekam Medis
@@ -140,6 +140,18 @@
                 <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
+          </li>
+          <li>
+          <a class="dropdown-item"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+
           </li>
         </ul>
       </nav>
