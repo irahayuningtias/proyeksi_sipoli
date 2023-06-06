@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Alat;
+use App\Models\User;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Schema;
 
 class AlatController extends Controller
@@ -45,7 +47,6 @@ class AlatController extends Controller
     public function store(Request $request)
     {
         $model = new Alat;
-        dd($model->id_alat = $request->id_alat);
         $model->nama_alat = $request->nama_alat;
         $model->jenis_alat = $request->jenis_alat;
         $model->harga = $request->harga;
@@ -54,7 +55,9 @@ class AlatController extends Controller
 
         return redirect('alat')
         ->with('success', 'data admin berhasil ditambahkan');
+        
     }
+    
 
     /**
      * Display the specified resource.

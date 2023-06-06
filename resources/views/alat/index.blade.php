@@ -186,6 +186,7 @@
                   <thead>
                   <tr>
                     <th>ID Alat Medis</th>
+                    <th>ID Staff</th>
                     <th>Nama Alat</th>
                     <th>Jenis Alat</th>
                     <th>Harga Alat</th>
@@ -195,6 +196,7 @@
                   @foreach ($alats as $key => $item)
               <tr>
                 <td>{{$item->id_alat}}</td>
+                <td>{{$item->id_staf}}</td>
                 <td>{{$item->nama_alat}}</td>
                 <td>{{$item->jenis_alat}}</td>
                 <td>{{$item->harga}}</td>

@@ -14,9 +14,15 @@ class Alat extends Model
     
     protected $fillable = [
         'id_alat', 
+        'id_staf',
         'nama_alat',
         'jenis_alat',
         'harga',
         'jumlah',
     ];
+
+    public function alat()
+    {
+        return $this->hasMany(Users::class);
+    }
 }

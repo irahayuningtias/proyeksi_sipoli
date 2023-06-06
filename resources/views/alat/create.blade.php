@@ -182,25 +182,47 @@
               <form method="POST" action="{{ url('alat') }}">
                 @csrf
                 <div class="card-body">
+                <div class="form-group">
+                    <label for="inputIdAlat">ID Alat Medis</label>
+                    <input type="id_alat" class="form-control" id="inputIdAlat" placeholder="">
+                    @foreach($errors->get('id_alat') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
+                  </div>
                   <div class="form-group">
-                    <label for="inputIdAlatMedis">ID Alat Medis</label>
-                    <input type="id_alat" class="form-control" id="inputIdAlatMedis" placeholder="">
+                    <label for="inputIdStaf">ID Staff</label>
+                    <input type="id_staf" class="form-control" id="inputIdStaf" placeholder="">
+                    @foreach($errors->get('id_staf') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputNamaAlat">Nama Alat Medis</label>
                     <input type="nama_alat" class="form-control" id="inputNamaAlat" placeholder="">
+                    @foreach($errors->get('nama_alat') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputJenisAlat">Jenis Alat Medis</label>
                     <input type="jenis_alat" class="form-control" id="inputJenisAlat" placeholder="">
+                    @foreach($errors->get('jenis_alat') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputHargaAlat">Harga Alat Medis</label>
                     <input type="harga_alat" class="form-control" id="inputHargaAlat" placeholder="">
+                    @foreach($errors->get('harga') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputJmlAlat">Jumlah Alat Medis</label>
                     <input type="jml_alat" class="form-control" id="inputJmlAlat" placeholder="">
+                    @foreach($errors->get('jumlah') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                 </div>
                 <!-- /.card-body -->

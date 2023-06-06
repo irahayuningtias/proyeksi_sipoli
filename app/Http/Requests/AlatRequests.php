@@ -25,6 +25,7 @@ class alatRequest extends FormRequest
     {
         return [
             'id_alat'      => 'required',
+            'id_staf'      => 'required',
             'nama_alat'    => 'required',
             'jenis_alat'   => 'required',
             'harga'        => 'required',
