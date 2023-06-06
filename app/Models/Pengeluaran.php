@@ -22,7 +22,7 @@ class Pengeluaran extends Model
         'jml_keluar',
     ];
 
-    public function pemasukan()
+    public function pengeluaran()
     {
         return $this->hasMany(Users::class);
     }

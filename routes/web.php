@@ -9,6 +9,7 @@ use App\Http\Controllers\ObatController;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\PemasukanController;
 use App\Http\Controllers\PengeluaranController;
+use App\Http\Controllers\RekamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -93,6 +94,7 @@ Route::get('/healthinfo', function(){
                 Route::resource('alat', AlatController::class);
                 Route::resource('pemasukan', PemasukanController::class);
                 Route::resource('pengeluaran', PengeluaranController::class);
+                Route::resource('rekam', RekamController::class);
                 Route::get('/dashboard', function() {
                     return view('admin/dashboard');
                 });

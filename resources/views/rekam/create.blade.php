@@ -9,10 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
-  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
-  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('admin/dist/css/adminlte.min.css') }}">
 </head>
@@ -63,7 +59,8 @@
     <a href="dashboard" class="brand-link">
       <span class="brand-text font-weight-bold">SIPOLI</span>
     </a>
-    <!-- Sidebar -->
+
+    <!--Sidebar -->
       <!-- SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
@@ -146,7 +143,7 @@
           </li>
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->=
+      <!-- /.sidebar-menu -->
     <!-- /.sidebar -->
   </aside>
 
@@ -157,7 +154,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Rekam Medis</h1>
+            <h1>Form Rekam Medis</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -173,71 +170,71 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
-            <div class="card">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
               <div class="card-header">
-                <a href="rekam-medis/form-rekam-medis">
-                  <button type="submit" class="btn btn-primary">Tambah Data</button>
-                </a>
+                <h3 class="card-title">Rekam Medis</h3>
               </div>
               <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-                    <th>ID Rekam Medis</th>
-                    <th>ID Staf Kesehatan</th>
-                    <th>ID Pasien</th>
-                    <th>Tanggal Periksa</th>
-                    <th>Jenis Penyakit</th>
-                    <th>Keluhan</th>
-                    <th>Aksi</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tfoot>
-                  <tr>
-                    <th>ID Rekam Medis</th>
-                    <th>ID Staf Kesehatan</th>
-                    <th>ID Pasien</th>
-                    <th>Tanggal Periksa</th>
-                    <th>Jenis Penyakit</th>
-                    <th>Keluhan</th>
-                    <th>Aksi</th>
-                  </tr>
-                  </tfoot>
-                </table>
-              </div>
-              <!-- /.card-body -->
+              <!-- form start -->
+              <form method="POST" action="{{ url('rekam') }}">
+              @csrf
+
+                  <div class="form-group">
+                    <label for="inputIdStaf">ID Staf Kesehatan</label>
+                    <input type="id_staf" class="form-control" id="inputIdStaf" placeholder="" name="id_adminrm">
+                    @foreach($errors->get('id_adminrm') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
+                  </div>
+                  <div class="form-group">
+                    <label for="inputIdPasien">ID Pasien</label>
+                    <input type="id_pasien" class="form-control" id="inputIdPasien" placeholder="" name="id_ps">
+                    @foreach($errors->get('id_ps') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
+                  </div>
+                  <div class="form-group">
+                    <label for="inputTglPeriksa">Tanggal Periksa</label>
+                    <input type="date" class="form-control" id="inputTglPeriksa" placeholder="" name="tgl_periksa">
+                    @foreach($errors->get('tgl_periksa') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
+                  </div>
+                  <div class="form-group">
+                    <label for="inputJenisPenyakit">Jenis Penyakit</label>
+                    <input type="jenis_penyakit" class="form-control" id="inputJenisPenyakit" placeholder="" name="jenis_penyakit">
+                    @foreach($errors->get('jenis_penyakit') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
+                  </div>
+                  <div class="form-group">
+                    <label for="inputKeluhan">Keluhan</label>
+                    <input type="keluhan" class="form-control" id="inputKeluhan" placeholder="" name="keluhan">
+                    @foreach($errors->get('keluhan') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
+                  </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
             </div>
             <!-- /.card -->
           </div>
-          <!-- /.col -->
+          <!--/.col (right) -->
         </div>
         <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
+      </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
+  
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
@@ -258,40 +255,17 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables  & Plugins -->
-<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="../../plugins/jszip/jszip.min.js"></script>
-<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
-<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <!-- Page specific script -->
 <script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
+$(function () {
+  bsCustomFileInput.init();
+});
 </script>
 </body>
 </html>
