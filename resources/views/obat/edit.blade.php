@@ -179,45 +179,64 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="inputIdObat">ID Obat</label>
-                    <input type="id_obat" class="form-control" id="inputIdObat" placeholder="">
-                  </div>
+              <form method="POST" action="{{ url('obat/'.$obat->id) }}">
+                @csrf
+                @method('PUT')
+
                   <div class="form-group">
                     <label for="inputIdStaf">ID Staf Kesehatan</label>
-                    <input type="id_staf" class="form-control" id="inputIdStaf" placeholder="">
+                    <input type="id_staf" class="form-control" id="inputIdStaf" placeholder="" name="id_staffob">
+                    @foreach($errors->get('id_staffob') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputNamaObat">Nama Obat</label>
-                    <input type="nama_obat" class="form-control" id="inputNamaObat" placeholder="">
+                    <input type="nama_obat" class="form-control" id="inputNamaObat" placeholder="" name="nama_obat">
+                    @foreach($errors->get('nama_obat') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputJenisObat">Jenis Obat</label>
-                    <input type="jenis_obat" class="form-control" id="inputJenisObat" placeholder="">
+                    <input type="jenis_obat" class="form-control" id="inputJenisObat" placeholder="" name="jenis_obat">
+                    @foreach($errors->get('jenis_obat') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputManfaatObat">Manfaat Obat</label>
-                    <input type="manfaat_obat" class="form-control" id="inputManfaatObat" placeholder="">
+                    <input type="manfaat_obat" class="form-control" id="inputManfaatObat" placeholder="" name="manfaat">
+                    @foreach($errors->get('manfaat') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputTglBeli">Tanggal Beli</label>
-                    <input type="tgl_beli" class="form-control" id="inputTglBeli" placeholder="">
+                    <input type="date" class="form-control" id="inputTglBeli" placeholder="" name="tgl_bl">
+                    @foreach($errors->get('tgl_bl') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputTglExp">Tanggal Expired</label>
-                    <input type="tgl_exp" class="form-control" id="inputTglExp" placeholder="">
+                    <input type="date" class="form-control" id="inputTglExp" placeholder="" name="tgl_exp">
+                    @foreach($errors->get('tgl_exp') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputJmlObat">Jumlah Obat</label>
-                    <input type="jml_obat" class="form-control" id="inputJmlObat" placeholder="">
+                    <input type="jml_obat" class="form-control" id="inputJmlObat" placeholder="" name="jml">
+                    @foreach($errors->get('jml') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </form>
             </div>
@@ -232,7 +251,7 @@
   </div>
   
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
+  <footer class="main-footer"
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 1.0.0
     </div>

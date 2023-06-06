@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlatController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ObatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,5 +90,12 @@ Route::get('/healthinfo', function(){
                     return view('admin/dashboard');
                 });
             });
+            Route::middleware(['auth'])->group(function () {
+                Route::resource('obat', ObatController::class);
+                Route::get('/dashboard', function() {
+                    return view('admin/dashboard');
+                });
+            });
+            
             
             
