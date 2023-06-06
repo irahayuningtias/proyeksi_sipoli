@@ -176,7 +176,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <a href="pemasukan/form-pemasukan">
+                <a href="{{ url('pemasukan/create') }}">
                   <button type="submit" class="btn btn-primary">Tambah Data</button>
                 </a>
               </div>
@@ -193,37 +193,33 @@
                     <th>Jumlah Pemasukan</th>
                     <th>Aksi</th>
                   </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tfoot>
-                  <tr>
-                    <th>ID Keuangan</th>
-                    <th>ID Admin</th>
-                    <th>Tanggal Masuk</th>
-                    <th>Jenis Pemasukan</th>
-                    <th>Detail Pemasukan</th>
-                    <th>Jumlah Pemasukan</th>
-                    <th>Aksi</th>
-                  </tr>
-                  </tfoot>
+                  @foreach ($pemasukans as $pemasukan)
+              <tr>
+                <td>{{ $pemasukan->id }}</td>
+                <td>{{$pemasukan->id_adminmk}}</td>
+                <td>{{$pemasukan->tgl_masuk}}</td>
+                <td>{{$pemasukan->jenis_pemasukan}}</td>
+                <td>{{$pemasukan->detail}}</td>
+                <td>{{$pemasukan->jlm_masuk}}</td>
+                <td>
+                      
+                <div class="d-flex justify-content-between">
+                  <div class="">
+                    <a href ="{{ url('pemasukan/'.$pemasukan->id.'/edit') }}">
+                    <button type="submit" class="btn btn-sm btn-primary">EDIT</button></a>
+                  </div>
+                  <div class="">
+                    <form action="{{ url('pemasukan/'.$pemasukan->id) }}" method="POST">
+                      @method('delete')
+                      @csrf
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button class="btn btn-sm btn-danger" type="submit">HAPUS</button></input>
+                    </form>
+                  </div>
+                </div>
+              </td> 
+                @endforeach
+</tr>
                 </table>
               </div>
               <!-- /.card-body -->

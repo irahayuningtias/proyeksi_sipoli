@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Pasien;
+use App\Models\Pemasukan;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Schema;
 
-class PasienController extends Controller
+class PemasukanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,9 @@ class PasienController extends Controller
      */
     public function index()
     {
-        $pasiens = Pasien::all();
-        return view('pasien.index', compact(
-            'pasiens'
+        $pemasukans = Pemasukan::all();
+        return view('pemasukan.index', compact(
+            'pemasukans'
         ));
     }
 
@@ -30,8 +30,8 @@ class PasienController extends Controller
      */
     public function create()
     {
-        $model = new Pasien;
-        return view('pasien.create', compact(
+        $model = new Pemasukan;
+        return view('pemasukan.create', compact(
             'model'
         ));
     }
@@ -44,16 +44,16 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
-        $model = new Pasien;
-        $model->id_admin = $request->id_admin;
-        $model->nama_pasien = $request->nama_pasien;
-        $model->umur = $request->umur;
-        $model->prodi = $request->prodi;
-        $model->jurusan = $request->jurusan;
+        $model = new Pemasukan;
+        $model->id_adminmk = $request->id_adminmk;
+        $model->tgl_masuk = $request->tgl_masuk;
+        $model->jenis_pemasukan = $request->jenis_pemasukan;
+        $model->detail = $request->detail;
+        $model->jlm_masuk = $request->jlm_masuk;
         $model->save();
 
-        return redirect('pasien')
-        ->with('success', 'data pasien berhasil ditambahkan');
+        return redirect('pemasukan')
+        ->with('success', 'data pemasukan berhasil ditambahkan');
     }
 
     /**
@@ -64,8 +64,7 @@ class PasienController extends Controller
      */
     public function show($id)
     {
-        $pasien = Pasien::find($id);
-        return view('pasien.edit', compact('pasien'));
+        //
     }
 
     /**
@@ -76,10 +75,9 @@ class PasienController extends Controller
      */
     public function edit($id)
     {
-        $pasien = Pasien::find($id);
-        return view('pasien.edit', compact('pasien'));
+        $pemasukan = Pemasukan::find($id);
+        return view('pemasukan.edit', compact('pemasukan'));
     }
-    
 
     /**
      * Update the specified resource in storage.
@@ -90,16 +88,16 @@ class PasienController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $pasien = Pasien::find($id);
-        $pasien->id_admin = $request->id_admin;
-        $pasien->nama_pasien = $request->nama_pasien;
-        $pasien->umur = $request->umur;
-        $pasien->prodi = $request->prodi;
-        $pasien->jurusan = $request->jurusan;
-        $pasien->save();
+        $pemasukan = Pemasukan::find($id);
+        $pemasukan->id_adminmk = $request->id_adminmk;
+        $pemasukan->tgl_masuk = $request->tgl_masuk;
+        $pemasukan->jenis_pemasukan = $request->jenis_pemasukan;
+        $pemasukan->detail = $request->detail;
+        $pemasukan->jlm_masuk = $request->jlm_masuk;
+        $pemasukan->save();
 
-        return redirect('pasien')
-        ->with('success', 'data pasien berhasil ditambahkan');
+        return redirect()->route('pemasukan.index')
+        ->with('success', 'pemasukan Berhasil Diupdate');
     }
 
     /**
@@ -108,9 +106,9 @@ class PasienController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pasien $pasien)
+    public function destroy(Pemasukan $pemasukan)
     {
-        Pasien::destroy($pasien->id);
-        return redirect()->route('pasien.index'); 
+        Pemasukan::destroy($pemasukan->id);
+        return redirect()->route('pemasukan.index'); 
     }
 }

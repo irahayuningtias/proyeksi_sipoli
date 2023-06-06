@@ -179,31 +179,43 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="inputIdPemasukan">ID Pemasukan</label>
-                    <input type="id_pemasukan" class="form-control" id="inputIdPemasukan" placeholder="">
-                  </div>
+              <form method="POST" action="{{ url('pemasukan') }}">
+              @csrf
+
                   <div class="form-group">
                     <label for="inputIdAdmin">ID Admin</label>
-                    <input type="id_admin" class="form-control" id="inputIdAdmin" placeholder="">
+                    <input type="id_admin" class="form-control" id="inputIdAdmin" placeholder="" name="id_adminmk">
+                    @foreach($errors->get('id_adminmk') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputTglMasuk">Tanggal Masuk</label>
-                    <input type="tgl_masuk" class="form-control" id="inputTglMasuk" placeholder="">
+                    <input type="date" class="form-control" id="inputTglMasuk" placeholder="" name="tgl_masuk">
+                    @foreach($errors->get('tgl_masuk') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputJenisPemasukan">Jenis Pemasukan</label>
-                    <input type="jenis_pemasukan" class="form-control" id="inputJenisPemasukan" placeholder="">
+                    <input type="jenis_pemasukan" class="form-control" id="inputJenisPemasukan" placeholder="" name="jenis_pemasukan">
+                    @foreach($errors->get('jenis_pemasukan') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputDetailPemasukan">Detail Pemasukan</label>
-                    <input type="detail_pemasukan" class="form-control" id="inputDetailPemasukan" placeholder="">
+                    <input type="detail_pemasukan" class="form-control" id="inputDetailPemasukan" placeholder="" name="detail">
+                    @foreach($errors->get('detail') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
                   <div class="form-group">
                     <label for="inputJmlPemasukan">Jumlah Pemasukan</label>
-                    <input type="jml_pemasukan" class="form-control" id="inputJmlPemasukan" placeholder="">
+                    <input type="jml_pemasukan" class="form-control" id="inputJmlPemasukan" placeholder="" name="jlm_masuk">
+                    @foreach($errors->get('jlm_masuk') as $msg)
+                      <p class="text-danger">{{ $msg }}</p>
+                    @endforeach
                   </div>
 
                 </div>

@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\PasienController;
+use App\Http\Controllers\PemasukanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +90,7 @@ Route::get('/healthinfo', function(){
                 Route::resource('obat', ObatController::class);
                 Route::resource('pasien', PasienController::class);
                 Route::resource('alat', AlatController::class);
+                Route::resource('pemasukan', PemasukanController::class);
                 Route::get('/dashboard', function() {
                     return view('admin/dashboard');
                 });
