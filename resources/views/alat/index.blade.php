@@ -186,31 +186,38 @@
                   <thead>
                   <tr>
                     <th>ID Alat Medis</th>
+                    <th>ID Staff</th>
                     <th>Nama Alat</th>
                     <th>Jenis Alat</th>
                     <th>Harga Alat</th>
                     <th>Jumlah Alat</th>
                     <th>Aksi</th>
                   </tr>
-                  @foreach ($alats as $key => $item)
+                  @foreach ($alats as $alat)
               <tr>
-                <td>{{$item->id_alat}}</td>
-                <td>{{$item->nama_alat}}</td>
-                <td>{{$item->jenis_alat}}</td>
-                <td>{{$item->harga}}</td>
-                <td>{{$item->jumlah}}</td>
+                <td>{{ $alat->id }}</td>
+                <td>{{$alat->id_staf}}</td>
+                <td>{{$alat->nama_alat}}</td>
+                <td>{{$alat->jenis_alat}}</td>
+                <td>{{$alat->harga}}</td>
+                <td>{{$alat->jumlah}}</td>
                 <td>
-                      <a href ="{{ url('alat/'.$item->id_alat.'/edit') }}">
-                      <button type="submit" class="btn btn-primary">EDIT</button></a>
-                    </td>
-                    <td>
-                      <form action="{{ url('alat/'.$item->id_alat) }}" method="POST">
+                      
+                <div class="d-flex justify-content-between">
+                  <div class="">
+                    <a href ="{{ url('alat/'.$alat->id.'/edit') }}">
+                    <button type="submit" class="btn btn-sm btn-primary">EDIT</button></a>
+                  </div>
+                  <div class="">
+                    <form action="{{ url('alat/'.$alat->id) }}" method="POST">
                       @method('delete')
                       @csrf
                       <input type="hidden" name="_method" value="DELETE">
-                      <button class="btn btn-danger" type="submit">HAPUS</button></input>
-                      </form>
-                    </td> 
+                      <button class="btn btn-sm btn-danger" type="submit">HAPUS</button></input>
+                    </form>
+                  </div>
+                </div>
+              </td> 
                 @endforeach
 </tr>
                 </table>
