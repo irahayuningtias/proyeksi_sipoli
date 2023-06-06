@@ -82,7 +82,7 @@
 					    <li><a class="menu" href="schedule">Schedule</a></li>
 				        <li><a class="menu" href="aboutus">About Us </a></li>
 				        <li><a class="menu active" href="contact">Contact</a></li>
-				        <li><a class="menu" href="login.index"> Login</a></li>
+				        <li><a class="menu" href="login"> Login</a></li>
 					</ul>
 				</div>
 			</div>

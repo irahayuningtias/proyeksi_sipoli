@@ -82,7 +82,7 @@
 					    <li><a class="menu active" href="schedule">Schedule</a></li>
 				        <li><a class="menu" href="aboutus">About Us </a></li>
 				        <li><a class="menu" href="contact">Contact</a></li>
-				        <li><a class="menu" href="login.index"> Login</a></li>
+				        <li><a class="menu" href="login"> Login</a></li>
 					</ul>
 				</div>
 			</div>
@@ -101,7 +101,7 @@
 			</div><!-- /.col-lg-4 -->
 			<div class="col-lg-6">
 				<h2>Dokter Gigi</h2>
-        <br><br><br><br>
+        <br><br><br><br><br><br>
         <p>Rabu: 11.00 - 16.00</p>
 			</div><!-- /.col-lg-4 -->
   </div>   
