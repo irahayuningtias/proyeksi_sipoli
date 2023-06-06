@@ -5,26 +5,88 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-	<title>SIPOLI - Home</title>
+	<title>SIPOLI | Home</title>
 	<link rel="stylesheet" href="{{(asset('doctor'))}}/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{{(asset('doctor'))}}/css/bootstrap.min.css">
 	<link rel="stylesheet" href="user.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
 	<script src="{{(asset('doctor'))}}/js/modernizr.js"></script>
+	<script src="{{(asset('doctor'))}}/js/bootstrap.js"></script>
 	<!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-
 </head>
+
+<style>
+
+	.slogan{
+		position: absolute;
+        width: 280px;
+        height: 50px;
+		right: 80px;
+        top: 140px;
+		font-family: 'Lora';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 70px;
+		line-height: 60px;
+		color: #435185
+	}
+
+	.rectangle1{
+		position: absolute;
+        width: 1240px;
+        height: 10px;
+        left: 12px;
+    	right: 50px;
+        top: 820px;
+		background: #435185;
+	}
+
+	.rectangle2{
+		position: absolute;
+        width: 1240px;
+        height: 150px;
+        left: 12px;
+    	right: 50px;
+        top: 830px;
+        background: #FFFFFF;
+        box-shadow: 3px 3px 10px rgba(0.60,0,0,0.65);
+        padding: 10px;
+	}
+
+	.col-lg-4{
+		left: 230px;
+		height: 150px;
+		width: 300px;
+		align: center;
+	}
+
+	.footer {
+		left: 500px;
+		text-align: left;
+		padding: 10px;
+	}
+
+	h2{
+		color:#435185; 
+		font-family:Lora; 
+		font-style: normal; 
+		font-weight: 700; 
+		font-size: 20px; 
+		line-height: 5px;
+	}
+</style>
+
 <body>
 	<!-- header section -->
 	<header class="top-header">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-5 header-logo">
-					<a href="{{(asset('doctor'))}}/index.html"><img src="{{(asset('doctor'))}}/img/logopolinema.jpg" width="150px" height="auto" alt="" class="img-responsive logo"></a>
+					<a><img src="{{(asset('doctor'))}}/img/logopolinema.jpg" width="150px" height="auto" alt="" class="img-responsive logo"></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -33,66 +95,52 @@
 					    <li><a class="menu" href="schedule">Schedule</a></li>
 				        <li><a class="menu" href="aboutus">About Us </a></li>
 				        <li><a class="menu" href="contact">Contact</a></li>
-				        <li><a class="menu" href="login.index"> Login</a></li>
+				        <li><a class="menu" href="login"> Login</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</header> <!-- end of header area -->
+
 	<section class="slider" id="home">
 		<div class="container-fluid">
 			<div class="row">
 			    <div id="slide" class="carousel slide carousel-fade" data-ride="carousel">
 					<div class="header-backup"></div>
-			        <!-- Wrapper for slides -->
-			        <div class="carousel-inner" role="listbox">
-			            <div class="item active">
-			            	<img src="{{(asset('doctor'))}}/img/stetoskop.jpg" alt="">
-								<div class="card">
-									<div class="rectangle-3"></div>
-									<div class="flex-row flex">
-										<div class="d-flex justify-content-evenly">
-											<div class="health-information lora-bold-east-bay-3-7px">Healt Information</div>
-											<div class="overlap-group">
-												<div class="more-info inter-medium-white-2-5px">More Info</div>
-											</div>
-										</div>
-										<div class="flex-col-1 flex-col-3">
-											<div class="opening-hours lora-bold-east-bay-3-7px">Opening Hours</div>
-											<div class="flex-container flex">
-												<div class="text inter-medium-white-2-5px-2">
-													<span class="inter-medium-sonic-silver-2-5px">Hari&nbsp;&nbsp;&nbsp;&nbsp;: Senin - Jumat</span>
-												</div>
-												<div class="text inter-medium-white-2-5px-2">
-													<span class="inter-medium-sonic-silver-2-5px">Pukul : </span><span class="span2">07.00 - 16.00</span>
-												</div>
-											</div>
-										</div>
-										<div class="emergency-cases lora-bold-east-bay-3-7px">emergency cases</div>
-										<div class="phone">+62 822-4445-3495</div>
+			        	<!-- Wrapper for slides -->
+			        	<div class="carousel-inner" role="listbox">
+			            	<div class="item active">
+			            		<img src="{{(asset('doctor'))}}/img/stetoskop.jpg">
+									<!-- Three columns of text below the carousel -->
+									<div class="slogan">
+										<p>Your health is our focus</p>
+									</div>
+									<div class="rectangle1"></div>
+									<div class="rectangle2"></div>
+								<div class="footer">
+									<div class="row2">
+											<div class="col-lg-4">
+												<h2>Health Information</h2>
+												<p><a class="btn btn-secondary" href="healthinfo">More Info &raquo;</a></p>
+											</div><!-- /.col-lg-4 -->
+											<div class="col-lg-4">
+												<h2>Opening Hours</h2>
+												<p style="font-family:'Inter'; font-style: normal;">Hari : Senin - Jumat</p>
+												<p style="color:#3C7CDC; font-family:'Inter'; font-style: normal;">Pukul: 07.00 - 16.00</p>
+											</div><!-- /.col-lg-4 -->
+											<div class="col-lg-4">
+												<h2>Emergency Cases</h2>
+												<p style= "color:#3C7CDC; font-family:'Inter'; font-style: normal;">+62 822-4455-3495</p>
+											</div><!-- /.col-lg-4 -->
 									</div>
 								</div>
-							</div>
-			        </div>
-			    </div>
+							</div>	
+			        	</div>
+			    	</div>
+				</div>
 			</div>
 		</div>
 	</section><!-- end of slider section -->
-	<!-- footer starts here -->
-	<footer class="footer clearfix">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-6 footer-para">
-					<p>&copy;Mostafizur All right reserved</p>
-				</div>
-				<div class="col-xs-6 text-right">
-					<a href=""><i class="fa fa-facebook"></i></a>
-					<a href=""><i class="fa fa-twitter"></i></a>
-					<a href=""><i class="fa fa-skype"></i></a>
-				</div>
-			</div>
-		</div>
-	</footer>
 
 	<!-- script tags
 	============================================================= -->

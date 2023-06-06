@@ -35,6 +35,10 @@ Route::get('/contact', function () {
 Route::get('/dashboard', function(){
     return View::make('admin/dashboard');
 });
+
+Route::get('/healthinfo', function(){
+    return View::make('user/health');
+});
 // Route::get('/pasien', function(){
 //     return View::make('admin/pasien');
 // });

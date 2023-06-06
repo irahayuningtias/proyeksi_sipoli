@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-	<title>SIPOLI - Schedule</title>
+	<title>SIPOLI - Contact</title>
 	<link rel="stylesheet" href="{{(asset('doctor'))}}/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{{(asset('doctor'))}}/css/bootstrap.min.css">
 	<link rel="stylesheet" href="user.css">
@@ -29,7 +29,7 @@
         text-align: center;
         position: absolute;
         width: 830px;
-        height: 360px;
+        height: 300px;
         left: 220px;
         right: 50px;
         top: 150px;
@@ -51,7 +51,7 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 15px;
-        color: #727272;
+        color: #3C7CDC;
       }
 
       .line{
@@ -60,7 +60,7 @@
         height: 0px;
         left: 480px;
         right: 50px;
-        top: 320px;
+        top: 300px;
         border: 0.2px solid #9D9B9B;
         transform: rotate(90deg);
       }
@@ -79,9 +79,9 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	    <ul class="nav navbar-nav navbar-right">
 					    <li><a class="menu" href="home">Home</a></li>
-					    <li><a class="menu active" href="schedule">Schedule</a></li>
+					    <li><a class="menu" href="schedule">Schedule</a></li>
 				        <li><a class="menu" href="aboutus">About Us </a></li>
-				        <li><a class="menu" href="contact">Contact</a></li>
+				        <li><a class="menu active" href="contact">Contact</a></li>
 				        <li><a class="menu" href="login.index"> Login</a></li>
 					</ul>
 				</div>
@@ -92,18 +92,15 @@
   <div class="rectangle1"></div>
   <div class="rectangle2">
       <div class="col-lg-6">
-		    <h2>Dokter Umum</h2>
-        <br><br><br><br>
-        <p>Rabu: 08.00 - 11.00</p>
-        <p>(Menyesuaikan jadwal dokter)</p>
-        <hr>
-        <p>Jumat: 12.15 - 14.15</p>
+			<h2>Email</h2>
+			<br><br><br><br>
+        	<p><a href="https://goo.gl/maps/oxGrcFJtMjkWAAUr8">poliklinik@polinema.ac.id</a></p>
 			</div><!-- /.col-lg-4 -->
 			<div class="col-lg-6">
-				<h2>Dokter Gigi</h2>
-        <br><br><br><br>
-        <p>Rabu: 11.00 - 16.00</p>
-			</div><!-- /.col-lg-4 -->
+			<h2>Telp</h2>
+        	<br><br><br><br>
+        	<p>+62 822-4455-3495</p>
+		</div><!-- /.col-lg-4 -->
   </div>   
   <div class="line"></div>
 </body>
