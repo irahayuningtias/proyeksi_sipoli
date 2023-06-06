@@ -18,6 +18,10 @@ class AlatController extends Controller
     public function index()
     {
         $alats = Alat::all();
+        // $id_alats = Alat::pluck('id_alat');
+        // foreach ($alats as $alat){
+        // echo $alat->id_alat;
+        // }
         return view('alat.index', compact(
             'alats'
         ));
@@ -47,6 +51,7 @@ class AlatController extends Controller
     public function store(Request $request)
     {
         $model = new Alat;
+        $model->id_staf = $request->id_staf;
         $model->nama_alat = $request->nama_alat;
         $model->jenis_alat = $request->jenis_alat;
         $model->harga = $request->harga;
@@ -78,7 +83,8 @@ class AlatController extends Controller
      */
     public function edit($id)
     {
-        //
+        $alat = Alat::find($id);
+        return view('alat.edit', compact('alat'));
     }
 
     /**
@@ -90,7 +96,16 @@ class AlatController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $alat = Alat::find($id);
+        $alat ->id_staf = $request->id_staf;
+        $alat ->nama_alat = $request->nama_alat;
+        $alat ->jenis_alat = $request->jenis_alat;
+        $alat ->harga = $request->harga;
+        $alat ->jumlah = $request->jumlah;
+        $alat -> save();
+
+        return redirect()->route('alat.index')
+        ->with('success', 'alat Berhasil Diupdate');
     }
 
     /**
@@ -99,8 +114,9 @@ class AlatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Alat $alat)
     {
-        //
+        Alat::destroy($alat->id);
+        return redirect()->route('alat.index'); 
     }
 }

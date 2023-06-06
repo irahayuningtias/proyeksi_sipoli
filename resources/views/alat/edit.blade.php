@@ -179,8 +179,10 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="{{ url('alat') }}">
+              <form method="POST" action="{{ url('alat/'.$alat->id) }}">
                 @csrf
+                @method('PUT')
+                
                 <div class="card-body">
                   <div class="form-group">
                     <label for="inputIdStaf">ID Staff</label>
