@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{asset('admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('admin/dist/css/adminlte.min.css') }}">
 </head>
@@ -59,8 +63,7 @@
     <a href="dashboard" class="brand-link">
       <span class="brand-text font-weight-bold">SIPOLI</span>
     </a>
-
-    <!--Sidebar -->
+    <!-- Sidebar -->
       <!-- SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
@@ -123,8 +126,8 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-              <a href="pemasukan" class="nav-link">
+          <li class="nngeluaranm">
+              <a href="pengeluaran" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
                   Pemasukan
@@ -143,7 +146,7 @@
           </li>
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->
+      <!-- /.sidebar-menu -->=
     <!-- /.sidebar -->
   </aside>
 
@@ -154,7 +157,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Form Pengeluaran</h1>
+            <h1>Data Pengeluaran</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -170,63 +173,69 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <!-- left column -->
-          <div class="col-md-12">
-            <!-- general form elements -->
-            <div class="card card-primary">
+          <div class="col-12">
+            <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Pengeluaran</h3>
+                <a href="{{ url('pengeluaran/create') }}">
+                  <button type="submit" class="btn btn-primary">Tambah Data</button>
+                </a>
               </div>
               <!-- /.card-header -->
-              <!-- form start -->
-              <form>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="inputIdPengeluaran">ID Pengeluaran</label>
-                    <input type="id_pengeluaran" class="form-control" id="inputIdPengeluaran" placeholder="">
+              <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <th>ID Keluar</th>
+                    <th>ID Admin</th>
+                    <th>Tanggal Keluar</th>
+                    <th>Jenis Pengeluaran</th>
+                    <th>Detail Pengeluaran</th>
+                    <th>Jumlah Item</th>
+                    <th>Jumlah Pengeluaran</th>
+                    <th>Aksi</th>
+                  </tr>
+                  @foreach ($pengeluarans as $pengeluaran)
+              <tr>
+                <td>{{$pengeluaran->id }}</td>
+                <td>{{$pengeluaran->id_adminkl}}</td>
+                <td>{{$pengeluaran->tgl_keluar}}</td>
+                <td>{{$pengeluaran->jenis_keluar}}</td>
+                <td>{{$pengeluaran->detail_keluar}}</td>
+                <td>{{$pengeluaran->jml_item}}</td>
+                <td>{{$pengeluaran->jml_keluar}}</td>
+                <td>
+                      
+                <div class="d-flex justify-content-between">
+                  <div pengeluaran"">
+                    <a href ="{{ url('pengeluaran/'.$pengeluaran->id.'/edit') }}">
+                    <button type="submit" class="btn btn-sm btn-primary">EDIT</button></a>
                   </div>
-                  <div class="form-group">
-                    <label for="inputIdAdmin">ID Admin</label>
-                    <input type="id_admin" class="form-control" id="inputIdAdmin" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputTglKeluar">Tanggal Keluar</label>
-                    <input type="tgl_keluar" class="form-control" id="inputTglKeluar" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputJenisPengeluaran">Jenis Pengeluaran</label>
-                    <input type="jenis_pengeluaran" class="form-control" id="inputJenisPengeluaran" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputDetailPengeluaran">Detail Pengeluaran</label>
-                    <input type="detail_pengeluaran" class="form-control" id="inputDetailPengeluaran" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputJmlItem">Jumlah Item</label>
-                    <input type="jml_item" class="form-control" id="inputJmlItem" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputJmlPengeluaran">Jumlah Pengeluaran</label>
-                    <input type="jml_pengelauran" class="form-control" id="inputJmlPengeluaran" placeholder="">
+                  <div pengeluaran"">
+                    <form action="{{ url('pengeluaran/'.$pengeluaran->id) }}" method="POST">
+                      @method('delete')
+                      @csrf
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button class="btn btn-sm btn-danger" type="submit">HAPUS</button></input>
+                    </form>
                   </div>
                 </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
+              </td> 
+                @endforeach
+</tr>
+                </table>
+              </div>
+              <!-- /.card-body -->
             </div>
             <!-- /.card -->
           </div>
-          <!--/.col (right) -->
+          <!-- /.col -->
         </div>
         <!-- /.row -->
-      </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
-  
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
@@ -247,17 +256,40 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- bs-custom-file-input -->
-<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../plugins/jszip/jszip.min.js"></script>
+<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <!-- Page specific script -->
 <script>
-$(function () {
-  bsCustomFileInput.init();
-});
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
 </script>
 </body>
 </html>
